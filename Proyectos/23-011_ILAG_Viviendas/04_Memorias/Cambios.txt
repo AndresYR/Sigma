@@ -1,2 +1,4 @@
 Duplex
 - Vigas: rec 3cmm en lugar de 2,5cm
+
+- Platea: B1: Q257 ∅ 7 mm #15 x 15 en lugar de ∅ 8 mm #15 x 15
