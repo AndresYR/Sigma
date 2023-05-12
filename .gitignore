@@ -4,5 +4,8 @@
 *.dwl2
 *.log
 
+# Archivos de topo
+*.ecw
+
 # Capeta de Reglementos
 /Reglamentos
