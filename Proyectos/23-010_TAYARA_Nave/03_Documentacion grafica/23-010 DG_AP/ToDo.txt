@@ -1,0 +1,12 @@
+Agregar baño, cocina, oficina
+Agregar pilar luz premoldeado
+Considerar recubrimiento en columnas de HA(25x45)
+Correas Ch Pl C 100 y 80
+Considerar diam 10 mm en Diag no solicitadas en columna
+Chapa N27 en laterales
+Porton 3,50x4,20
+Cenefaa 1x2
+canaleta 1,22x2,44
+Ventiluz 0,50x1
+Union cercha-columna con angular 2 1/4 x 1/4
+Base sin pernos
