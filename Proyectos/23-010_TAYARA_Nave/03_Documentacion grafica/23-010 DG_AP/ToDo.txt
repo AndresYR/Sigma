@@ -10,3 +10,6 @@ canaleta 1,22x2,44
 Ventiluz 0,50x1
 Union cercha-columna con angular 2 1/4 x 1/4
 Base sin pernos
+Cordones cercha 140x60x20x2
+Paredes medianeras
+Portico de 11,90
