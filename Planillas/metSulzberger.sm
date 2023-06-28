@@ -1,0 +1,609 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<?application progid="SMath Studio Desktop" version="1.0.8348.30405"?>
+<worksheet xmlns="http://smath.info/schemas/worksheet/1.0">
+  <settings ppi="96">
+    <identity>
+      <id>cdd7a388-f35c-470a-975b-49e78b0cbc39</id>
+      <revision>6</revision>
+    </identity>
+    <calculation>
+      <precision>2</precision>
+      <exponentialThreshold>5</exponentialThreshold>
+      <trailingZeros>true</trailingZeros>
+      <significantDigitsMode>false</significantDigitsMode>
+      <roundingMode>0</roundingMode>
+      <approximateEqualAccuracy>0</approximateEqualAccuracy>
+      <fractions>decimal</fractions>
+    </calculation>
+    <pageModel active="false" viewMode="2" printGrid="false" printAreas="true" simpleEqualsOnly="false" printBackgroundImages="true">
+      <paper id="1" orientation="Portrait" width="850" height="1100" />
+      <margins left="39" right="39" top="49" bottom="49" />
+      <header alignment="Center" color="#a9a9a9">&amp;[DATE] &amp;[TIME] - &amp;[FILENAME]</header>
+      <footer alignment="Center" color="#a9a9a9">&amp;[PAGENUM] / &amp;[COUNT]</footer>
+      <backgrounds />
+    </pageModel>
+    <dependencies>
+      <assembly name="SMath Studio Desktop" version="1.0.8348.30405" guid="a37cba83-b69c-4c71-9992-55ff666763bd" />
+      <assembly name="MathRegion" version="1.11.8348.30405" guid="02f1ab51-215b-466e-a74d-5d8b1cf85e8d" />
+      <assembly name="SpecialFunctions" version="1.12.8348.30405" guid="2814e667-4e12-48b1-8d51-194e480eabc5" />
+      <assembly name="TextRegion" version="1.11.8348.30405" guid="485d28c5-349a-48b6-93be-12a35a1c1e39" />
+      <assembly name="AreaRegion" version="1.11.8348.30405" guid="4974b228-4974-44cf-8274-bf2936b4a766" />
+    </dependencies>
+  </settings>
+  <regions type="content">
+    <region left="855" top="0" width="122" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1000</e>
+          <e type="operand" style="unit">Pa</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="9" width="320" height="29" color="#000000" fontSize="14">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p style="font-weight: bold; font-size: 14px;">Fundación - Método de Sulzberger</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="45" width="58" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p style="font-weight: bold;">Datos</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="81" width="55" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p style="text-decoration: underline;">Suelo</p>
+        </content>
+      </text>
+    </region>
+    <region left="324" top="81" width="78" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p style="text-decoration: underline;">Columna</p>
+        </content>
+      </text>
+    </region>
+    <region left="864" top="90" width="118" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">1000</e>
+          <e type="operand" style="unit">Pa</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="117" width="132" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <description active="true" position="Top" lang="eng">
+          <content>
+            <p>Peso específico</p>
+          </content>
+        </description>
+        <input>
+          <e type="operand">γ.suelo</e>
+          <e type="operand">17</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="117" width="104" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">h.c</e>
+          <e type="operand">0.48</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="162" width="104" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">b.c</e>
+          <e type="operand">0.24</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="855" top="189" width="112" height="27" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">kNm</e>
+          <e type="operand">1</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="198" width="126" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <description active="true" position="Top" lang="eng">
+          <content>
+            <p>Tensión admisible</p>
+          </content>
+        </description>
+        <input>
+          <e type="operand">σ.adm</e>
+          <e type="operand">110</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="207" width="104" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">H.c</e>
+          <e type="operand">6.30</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="270" width="50" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p style="text-decoration: underline;">Base</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="306" width="132" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <description active="true" position="Top" lang="eng">
+          <content>
+            <p>Coeficiente de balasto</p>
+          </content>
+        </description>
+        <input>
+          <e type="operand">k</e>
+          <e type="operand">100000</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="306" width="104" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">h.f</e>
+          <e type="operand">0.90</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="342" width="104" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">b.f</e>
+          <e type="operand">0.90</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="387" width="97" height="27" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">D</e>
+          <e type="operand">1.80</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="396" width="77" height="27" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <description active="true" position="Top" lang="eng">
+          <content>
+            <p>Ángulo de tierra gravante</p>
+          </content>
+        </description>
+        <input>
+          <e type="operand">β</e>
+          <e type="operand">10</e>
+          <e type="operand" style="unit">°</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="432" width="97" height="27" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">h</e>
+          <e type="operand">0.30</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="468" width="72" height="27" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <description active="true" position="Top" lang="eng">
+          <content>
+            <p>Coeficiente de fricción</p>
+          </content>
+        </description>
+        <input>
+          <e type="operand">μ</e>
+          <e type="operand">0.4</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="324" top="468" width="101" height="59" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">γ.H</e>
+          <e type="operand">25</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="558" width="144" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p>Fuerzas verticales</p>
+        </content>
+      </text>
+    </region>
+    <region left="9" top="594" width="266" height="34" color="#000000" fontSize="12">
+      <math trailingZeros="false">
+        <input>
+          <e type="operand">G.col</e>
+          <e type="operand">h.c</e>
+          <e type="operand">b.c</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">H.c</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">γ.H</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">18.14</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="639" width="266" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">G.base</e>
+          <e type="operand">h.f</e>
+          <e type="operand">b.f</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">γ.H</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">36.45</e>
+        </result>
+      </math>
+    </region>
+    <region left="9" top="675" width="91" height="34" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">G.suelo</e>
+          <e type="operand">0</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="9" top="711" width="340" height="34" color="#000000" fontSize="12">
+      <math trailingZeros="false">
+        <input>
+          <e type="operand">G.Total</e>
+          <e type="operand">G.col</e>
+          <e type="operand">G.base</e>
+          <e type="operator" args="2">+</e>
+          <e type="operand">G.suelo</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">54.59</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="765" width="163" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p>Fuerzas horizontales</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="792" width="87" height="27" color="#000000" fontSize="12">
+      <math decimalPlaces="4" trailingZeros="false">
+        <input>
+          <e type="operand">H</e>
+          <e type="operand">10</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="828" width="301" height="26" color="#000000" fontSize="12">
+      <text lang="spa" fontFamily="Arial" fontSize="12">
+        <content>
+          <p>Determinación del momento equilibrante</p>
+        </content>
+      </text>
+    </region>
+    <region left="18" top="864" width="230" height="34" color="#000000" fontSize="12">
+      <math trailingZeros="false">
+        <input>
+          <e type="operand">R.máx</e>
+          <e type="operand">G.Total</e>
+          <e type="operand">μ</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">21.84</e>
+        </result>
+      </math>
+    </region>
+    <region left="18" top="909" width="53" height="27" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">η</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="18" top="972" width="318" height="107" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">H'.1</e>
+          <e type="operand">R.máx</e>
+          <e type="operand">2</e>
+          <e type="operand">h</e>
+          <e type="operand">D</e>
+          <e type="operator" args="2">+</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">D</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">η</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">h.f</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operand">η</e>
+          <e type="operand">D</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">+</e>
+          <e type="operator" args="2">/</e>
+          <e type="operand">1</e>
+          <e type="operator" args="2">-</e>
+          <e type="operator" args="2">/</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <contract>
+          <e type="operand" style="unit">kN</e>
+        </contract>
+        <result action="numeric">
+          <e type="operand">20.33</e>
+        </result>
+      </math>
+    </region>
+    <region top="1089" color="#000000">
+      <area collapsed="false" />
+      <region left="18" top="1098" width="624" height="27" color="#000000" fontSize="12" showInputData="false">
+        <math>
+          <input>
+            <e type="operand">H</e>
+            <e type="operand">H'.1</e>
+            <e type="operator" args="2">&lt;</e>
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad D</e>
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad 2/3 D</e>
+            <e type="function" args="3">if</e>
+          </input>
+          <result action="numeric">
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad D</e>
+          </result>
+        </math>
+      </region>
+      <region left="27" top="1125" width="264" height="66" color="#000000" fontSize="12">
+        <math>
+          <input>
+            <e type="operand">M.e</e>
+            <e type="operand">b.f</e>
+            <e type="operand">D</e>
+            <e type="operand">3</e>
+            <e type="operator" args="2">^</e>
+            <e type="operator" args="2">*</e>
+            <e type="operand">12</e>
+            <e type="operator" args="2">/</e>
+            <e type="operand">k</e>
+            <e type="operand">100</e>
+            <e type="operator" args="2">/</e>
+            <e type="operator" args="2">*</e>
+            <e type="operator" args="2">:</e>
+          </input>
+          <contract>
+            <e type="operand">kNm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">437.40</e>
+          </result>
+        </math>
+      </region>
+      <region left="27" top="1224" width="211" height="59" color="#000000" fontSize="12">
+        <math>
+          <input>
+            <e type="operand">P.1</e>
+            <e type="operand">k</e>
+            <e type="operand">D</e>
+            <e type="operator" args="2">*</e>
+            <e type="operand">4</e>
+            <e type="operand">100</e>
+            <e type="operator" args="2">*</e>
+            <e type="operator" args="2">/</e>
+            <e type="operator" args="2">:</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">kN</e>
+            <e type="operand" style="unit">m</e>
+            <e type="operand">2</e>
+            <e type="operator" args="2">^</e>
+            <e type="operator" args="2">/</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">450.00</e>
+          </result>
+        </math>
+      </region>
+      <region top="1278" color="#000000">
+        <area terminator="true" />
+      </region>
+    </region>
+    <region top="1305" color="#000000">
+      <area collapsed="true" />
+      <region left="18" top="1314" width="624" height="27" color="#000000" fontSize="12" showInputData="false">
+        <math>
+          <input>
+            <e type="operand">H</e>
+            <e type="operand">H'.1</e>
+            <e type="operator" args="2">&lt;</e>
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad D</e>
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad 2/3 D</e>
+            <e type="function" args="3">if</e>
+          </input>
+          <result action="numeric">
+            <e type="operand" style="string">El momento de vuelco (M) se calcula rotando a la profundidad D</e>
+          </result>
+        </math>
+      </region>
+      <region left="27" top="1341" width="264" height="66" color="#000000" fontSize="12">
+        <math>
+          <input>
+            <e type="operand">M.e</e>
+            <e type="operand">b.f</e>
+            <e type="operand">D</e>
+            <e type="operand">3</e>
+            <e type="operator" args="2">^</e>
+            <e type="operator" args="2">*</e>
+            <e type="operand">12</e>
+            <e type="operator" args="2">/</e>
+            <e type="operand">k</e>
+            <e type="operand">100</e>
+            <e type="operator" args="2">/</e>
+            <e type="operator" args="2">*</e>
+            <e type="operator" args="2">:</e>
+          </input>
+          <contract>
+            <e type="operand">kNm</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">437.40</e>
+          </result>
+        </math>
+      </region>
+      <region left="27" top="1440" width="211" height="59" color="#000000" fontSize="12">
+        <math>
+          <input>
+            <e type="operand">P.1</e>
+            <e type="operand">k</e>
+            <e type="operand">D</e>
+            <e type="operator" args="2">*</e>
+            <e type="operand">4</e>
+            <e type="operand">100</e>
+            <e type="operator" args="2">*</e>
+            <e type="operator" args="2">/</e>
+            <e type="operator" args="2">:</e>
+          </input>
+          <contract>
+            <e type="operand" style="unit">kN</e>
+            <e type="operand" style="unit">m</e>
+            <e type="operand">2</e>
+            <e type="operator" args="2">^</e>
+            <e type="operator" args="2">/</e>
+          </contract>
+          <result action="numeric">
+            <e type="operand">450.00</e>
+          </result>
+        </math>
+      </region>
+      <region top="1494" color="#000000">
+        <area terminator="true" />
+      </region>
+    </region>
+  </regions>
+</worksheet>
