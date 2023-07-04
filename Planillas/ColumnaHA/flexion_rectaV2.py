@@ -1,6 +1,7 @@
 # Datos columna
 import numpy as np
 import openpyxl
+import utils
 
 base=0.35
 altura=0.5
@@ -10,7 +11,9 @@ tension_carac=20.684
 # Datos armadura
 area= 4.91/10000
 cant= [3,2,3]
+area_total = area*sum(cant)
 pos= [0.035,0.25,0.465]
+Fy = 413.685
 
 # Constantes
 beta1= 0.85
@@ -27,41 +30,58 @@ ws.cell(row=1, column=4, value = 'c')
 wb.save('FlexionRecta.xlsx')
 
 # Calculo
-c_array= np.arange(altura/beta1+.1, -altura/2,-0.01)
+c_array= np.arange(altura/beta1, -altura/2,-0.01)
 row = 1
+
 for c in c_array:
 	phi= -Ecu/c
-	Pcompresion= -0.85*tension_carac*beta1*c*base
+	Pcompresion= -0.85*tension_carac*beta1*(c*base-area_total)
 	Pn= Pcompresion
-	Mcompresion=-0.85*tension_carac*beta1*c*base*(beta1*c-altura)/2
+	Mcompresion= Pcompresion*(beta1*c-altura)/2
 	Mn= Mcompresion
-
+	Totaltraccion = 0
+	TotalMomentoTraccion = 0
+	Es=[]
 	for i in range(len(pos)):
 		Esi= phi*(pos[i]-c)
-		if np.abs(Esi*ModYoung) < 551.58: 
+		Es.append(Esi)
+		if np.abs(Esi*ModYoung) < Fy: 
 			fsi= Esi*ModYoung
 		elif Esi*ModYoung < 0:
-			fsi= -551.58
+			fsi= -Fy
 		else:
-			fsi=551.58
+			fsi= Fy
 	
 		disty= pos[i]-altura*0.5
 		Ptraccion= area*fsi*cant[i]
 		Pn+= Ptraccion
+		Totaltraccion+=Ptraccion
 		Mtraccion=area*fsi*cant[i]*disty
 		Mn+= Mtraccion
+		TotalMomentoTraccion += Mtraccion
 		if Pn > 0:
-			Pn= Ptraccion
-			Mn+= area*fsi*cant[i]*disty
+			Pn= Totaltraccion
+			Mn= TotalMomentoTraccion
 
 	e=-Mn/Pn	
 	
-	if Mn>0:
+	coef_reduccion = utils.coef_reduccion(np.max(Es))
+	P0 = -0.8*(0.85*tension_carac*(base*altura-area_total)+area_total*Fy)
+	if np.abs(Pn*coef_reduccion) > np.abs(P0*.65):
+		Pn = P0
+
+	if Mn>=0 and c>0:
 		row+= 1
-		print(f"| Pn= {round(Pn,4)} | Mn= {round(Mn,4)} | e= {round(e,3)} | c={round(c,2)}")
-		ws.cell(row=row, column=1, value = -Pn)
-		ws.cell(row=row, column=2, value = Mn)
-		ws.cell(row=row, column=3, value = e)
-		ws.cell(row=row, column=4, value = c)
+		if row == 2:
+			ws.cell(row=row, column=1, value = -P0*0.65)
+			ws.cell(row=row, column=2, value = 0)
+			ws.cell(row=row, column=3, value = "-")
+			ws.cell(row=row, column=4, value = "-")
+		else:
+			print(f"| Pn= {round(Pn,4)} | Mn= {round(Mn,4)} | e= {round(e,3)} | c={round(c,2)}")
+			ws.cell(row=row, column=1, value = -Pn*coef_reduccion)
+			ws.cell(row=row, column=2, value = Mn*coef_reduccion)
+			ws.cell(row=row, column=3, value = e)
+			ws.cell(row=row, column=4, value = c)
 
 wb.save('FlexionRecta.xlsx')
