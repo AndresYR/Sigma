@@ -3,8 +3,8 @@ import numpy as np
 import openpyxl
 import utils
 
-base=0.5
-altura=0.5
+base=0.2
+altura=0.2
 #tension_carac=25
 tension_carac=24.5
 
