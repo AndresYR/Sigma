@@ -52,3 +52,5 @@ def coef_reduccion(Es):
     else:
         coef = 0.90
     return coef
+
+    

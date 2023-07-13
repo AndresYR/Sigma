@@ -11,7 +11,7 @@ sheet = wb.sheets[0]
 base=sheet["H2"].value/100
 altura=sheet["H3"].value/100
 tension_carac=sheet["H4"].value/100
-recubrimiento = sheet["H5"]/100
+rec = sheet["H5"]/100
 
 # Datos armadura
 barras_sup_e_inf = sheet["H8"].value
@@ -19,9 +19,27 @@ barras_laterales = sheet["H9"].value
 
 diam_barras_esq = sheet["H10"].value/1000
 area_barras_esq = np.pi*diam_barras_esq**2/4
+area_barras_lat = 0
 if barras_sup_e_inf or barras_laterales:
 	diam_barras_lat = sheet["H11"].value/1000
 	area_barras_lat = np.pi*diam_barras_lat**2/4
+diam_estribos = sheet["H12"].value/1000
+
+posicion = [
+			# Esquina
+			{"x": rec + diam_estribos + diam_barras_esq/2,
+			 "y": altura-rec-diam_estribos-diam_barras_esq/2,
+			 "area": area_arm_esquinas},
+			{"x": base - (rec + diam_estribos + diam_arm_esquinas/2),
+			 "y": altura-rec-diam_estribos-diam_arm_esquinas/2,
+			 "area": area_arm_esquinas},
+			{"x": rec + diam_estribos + diam_arm_esquinas/2,
+			 "y": rec+diam_estribos+diam_arm_esquinas/2,
+			 "area": area_arm_esquinas},
+			{"x": base - (rec + diam_estribos + diam_arm_esquinas/2),
+			 "y": rec+diam_estribos+diam_arm_esquinas/2,
+			 "area": area_arm_esquinas}
+	]
 
 area= 2.85/10000
 cant= [4,2,2,4]

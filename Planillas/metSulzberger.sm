@@ -4,7 +4,7 @@
   <settings ppi="96">
     <identity>
       <id>cdd7a388-f35c-470a-975b-49e78b0cbc39</id>
-      <revision>6</revision>
+      <revision>7</revision>
     </identity>
     <calculation>
       <precision>2</precision>
@@ -604,6 +604,88 @@
       <region top="1494" color="#000000">
         <area terminator="true" />
       </region>
+    </region>
+    <region left="27" top="1638" width="135" height="27" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">P</e>
+          <e type="operand">2090.04</e>
+          <e type="operand" style="unit">kN</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="1665" width="154" height="27" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">altura</e>
+          <e type="operand">26.61</e>
+          <e type="operand" style="unit">m</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="1692" width="183" height="27" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">modY</e>
+          <e type="operand">29725.41</e>
+          <e type="operand" style="unit">MPa</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="1719" width="176" height="39" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">I</e>
+          <e type="operand">4071631741</e>
+          <e type="operand" style="unit">cm</e>
+          <e type="operand">4</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+      </math>
+    </region>
+    <region left="27" top="1764" width="334" height="103" color="#000000" fontSize="12">
+      <math>
+        <input>
+          <e type="operand">T</e>
+          <e type="operand">2</e>
+          <e type="operand">3.14</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">P</e>
+          <e type="operand">altura</e>
+          <e type="operand">3</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">3</e>
+          <e type="operand">modY</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand">I</e>
+          <e type="operator" args="2">*</e>
+          <e type="operand" style="unit">g.e</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operand">1</e>
+          <e type="operand">2</e>
+          <e type="operator" args="2">/</e>
+          <e type="bracket">(</e>
+          <e type="operator" args="2">^</e>
+          <e type="operator" args="2">*</e>
+          <e type="operator" args="2">:</e>
+        </input>
+        <result action="numeric">
+          <e type="operand">0.21</e>
+          <e type="operand" style="unit">s</e>
+          <e type="operator" args="2">*</e>
+        </result>
+      </math>
     </region>
   </regions>
 </worksheet>
